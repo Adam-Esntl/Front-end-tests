@@ -14,15 +14,17 @@
     <div ng-switch="tab">
       <div ng-switch-when="numbers">
         <input type="text" ng-model="myValue" />
-        <h1 ng-repeat="number in numbers | filter:myValue track by $index">{{ number }}</h1>
+        <div ng-repeat="number in numbers | filter:myValue track by $index">
+          <h1>{{ number }}</h1>
+        </div>
       </div>
       <div ng-switch-when="form">
-        <form ng-submit="numbers.push(myNumber); $root.tab = 'numbers'">
+        <form ng-submit="numbers.push(myNumber); myNumber = null; $root.tab='numbers'">
           <input type="number" ng-model="myNumber" required="" />
           <input type="submit" />
         </form>
-        <button ng-click="numbers.pop();$root.tab = 'numbers'">Pop</button>
-        <button ng-click="numbers.push(numbers.length);$root.tab = 'numbers'">Push</button>
+        <button ng-click="numbers.pop(); $root.tab='numbers'">Pop</button>
+        <button ng-click="numbers.push(numbers.length); $root.tab='numbers'">Push</button>
       </div>
     </div>
   </body>
