@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <div ng-controller="myController">
+      <h1>My Messages</h1>
+      <div ng-repeat="message in messages | orderBy: 'author'">
+        <p>
+          <strong>Author:</strong>
+ {{ message.author }}</p>
+        <p>
+          <strong>Content:</strong>
+ {{ message.content | lowercase }}</p>
+        <p>
+          <strong>Published: {{ message.published | date:'short' }}</strong>
+        </p>
+        <p>
+          <strong>Views: {{ message.views | number }} </strong>
+        </p>
+        <hr />
+      </div>
+    </div>
+  </body>
+
+</html>
