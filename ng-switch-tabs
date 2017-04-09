@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app="">
 
   <head>
@@ -8,6 +9,7 @@
     <nav>
       <a href="#" ng-click="tab='numbers'">Numbers</a>
       <a href="#" ng-click="tab='form'">Form</a>
+      <a href="#" ng-click="tab='email'">Email</a>
     </nav>
     <div ng-switch="tab">
       <div ng-switch-when="numbers">
@@ -15,6 +17,9 @@
       </div>
       <div ng-switch-when="form">
         <p>Form interface will go here!</p>
+      </div>
+      <div ng-switch-when="email">
+        <p>This is email!</p>
       </div>
     </div>
   </body>
