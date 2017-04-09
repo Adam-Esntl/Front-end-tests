@@ -1,0 +1,22 @@
+<html ng-app="">
+
+  <head>
+    <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
+  </head>
+
+  <body ng-init="numbers=[0,1,2,3,4,5]">
+    <nav>
+      <a href="#" ng-click="tab='numbers'">Numbers</a>
+      <a href="#" ng-click="tab='form'">Form</a>
+    </nav>
+    <div ng-switch="tab">
+      <div ng-switch-when="numbers">
+        <p>Numbers interface will go here!</p>
+      </div>
+      <div ng-switch-when="form">
+        <p>Form interface will go here!</p>
+      </div>
+    </div>
+  </body>
+
+</html>
