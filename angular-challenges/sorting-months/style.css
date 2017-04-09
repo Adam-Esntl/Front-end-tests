@@ -1,0 +1,27 @@
+/* Styles go here */
+
+body {
+  margin-left: 10px;
+}
+
+.months{
+  border-style:solid;
+  margin-top:10px;
+
+}
+
+.winter{
+  background:white;
+}
+
+.spring{
+  background:green;
+}
+
+.summer{
+  background:orange;
+}
+
+.fall{
+  background:brown;
+}
